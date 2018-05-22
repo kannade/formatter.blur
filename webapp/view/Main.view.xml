@@ -1,0 +1,31 @@
+<mvc:View controllerName="formatter.blur.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<l:BlockLayout id="BlockLayout">
+						<l:BlockLayoutRow>
+							<l:BlockLayoutCell title="50% width cell">
+								<l:VerticalLayout>
+									<Text id="lblEmpNo" text="{path : 'oEmplMdl>/Pernr', formatter: 'formatter.blur.model.formatter.formatBlur' }"
+										visible="{= !!${oEmplMdl>/Pernr} }"/>
+									<Text id="lblPosition" text="{oEmplMdl>/PositionTxt}" visible="{= !!${oEmplMdl>/PositionTxt} }"/>
+									<Text id="lblOrgUnit" text="{oEmplMdl>/OrgunitTxt}" visible="{= !!${oEmplMdl>/OrgunitTxt} }"/>
+								</l:VerticalLayout>
+							</l:BlockLayoutCell>
+							<l:BlockLayoutCell title="50% width cell">
+								<l:VerticalLayout>
+									<Text id="lblEmpNo2" text="{path : 'oEmplMdl>/Pernr2', formatter: 'formatter.blur.model.formatter.formatBlur' }"
+										visible="{= !!${oEmplMdl>/Pernr2} }"/>
+									<Text id="lblPosition2" text="{oEmplMdl>/PositionTxt2}" visible="{= !!${oEmplMdl>/PositionTxt2} }"/>
+									<Text id="lblOrgUnit2" text="{oEmplMdl>/OrgunitTxt2}" visible="{= !!${oEmplMdl>/OrgunitTxt2} }"/>
+								</l:VerticalLayout>
+							</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:BlockLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
